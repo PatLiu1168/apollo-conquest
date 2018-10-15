@@ -13,47 +13,47 @@ var button : int := 0
 var bulletx : int := 0
 var bullety : int := 0
 
-var numFrames1 := Pic.Frames ("apollo1.gif")
+var numFrames1 := Pic.Frames ("Pictures/apollo1.gif")
 var pics1 : array 1 .. numFrames1 of int
-Pic.FileNewFrames ("apollo1.gif", pics1, delayTime)
+Pic.FileNewFrames ("Pictures/apollo1.gif", pics1, delayTime)
 var sprite1 : int := Sprite.New (pics1 (1))
 Sprite.SetPosition (sprite1, x, y, false)
 
-var numFrames2 := Pic.Frames ("apollo2.gif")
+var numFrames2 := Pic.Frames ("Pictures/apollo2.gif")
 var pics2 : array 1 .. numFrames2 of int
-Pic.FileNewFrames ("apollo2.gif", pics2, delayTime)
+Pic.FileNewFrames ("Pictures/apollo2.gif", pics2, delayTime)
 var sprite2 : int := Sprite.New (pics2 (1))
 Sprite.SetPosition (sprite2, x, y, false)
 
-var numFrames3 := Pic.Frames ("apollo3.gif")
+var numFrames3 := Pic.Frames ("Pictures/apollo3.gif")
 var pics3 : array 1 .. numFrames3 of int
-Pic.FileNewFrames ("apollo3.gif", pics3, delayTime)
+Pic.FileNewFrames ("Pictures/apollo3.gif", pics3, delayTime)
 var sprite3 : int := Sprite.New (pics3 (1))
 Sprite.SetPosition (sprite3, x, y, false)
 
-var numFrames4 := Pic.Frames ("apollo4.gif")
+var numFrames4 := Pic.Frames ("Pictures/apollo4.gif")
 var pics4 : array 1 .. numFrames4 of int
-Pic.FileNewFrames ("apollo4.gif", pics4, delayTime)
+Pic.FileNewFrames ("Pictures/apollo4.gif", pics4, delayTime)
 var sprite4 : int := Sprite.New (pics4 (1))
 Sprite.SetPosition (sprite4, x, y, false)
 
-var pictCursor : int := Pic.FileNew ("target.bmp")
+var pictCursor : int := Pic.FileNew ("Pictures/target.bmp")
 var spriteCursor : int := Sprite.New (pictCursor)
 
 var money : int := 0
 var intelligence, strength, defense, speed : int := 0
 var range : int := 100
 
-var pictWeaponright : int := Pic.FileNew ("arrow2.bmp")
+var pictWeaponright : int := Pic.FileNew ("Pictures/arrow2.bmp")
 var spriteWeaponright : int := Sprite.New (pictWeaponright)
 Sprite.SetPosition (spriteWeaponright, bulletx, bullety, true)
-var pictWeaponup : int := Pic.FileNew ("arrow1.bmp")
+var pictWeaponup : int := Pic.FileNew ("Pictures/arrow1.bmp")
 var spriteWeaponup : int := Sprite.New (pictWeaponup)
 Sprite.SetPosition (spriteWeaponup, bulletx, bullety, true)
-var pictWeapondown : int := Pic.FileNew ("arrow3.bmp")
+var pictWeapondown : int := Pic.FileNew ("Pictures/arrow3.bmp")
 var spriteWeapondown : int := Sprite.New (pictWeapondown)
 Sprite.SetPosition (spriteWeapondown, bulletx, bullety, true)
-var pictWeaponleft : int := Pic.FileNew ("arrow4.bmp")
+var pictWeaponleft : int := Pic.FileNew ("Pictures/arrow4.bmp")
 var spriteWeaponleft : int := Sprite.New (pictWeaponleft)
 Sprite.SetPosition (spriteWeaponleft, bulletx, bullety, true)
 
@@ -268,7 +268,7 @@ loop
     end if
 
     %TUTORIAL STAGES
-    Pic.ScreenLoad ("stage1back.bmp", 0, 0, picMerge)
+    Pic.ScreenLoad ("Pictures/stage1back.bmp", 0, 0, picMerge)
     loop
 	movement
 	fork sidebar
@@ -284,7 +284,7 @@ loop
     x := 527
     y := 230
     Sprite.Show (sprite4)
-    Pic.ScreenLoad ("stage2back.bmp", 0, 0, picMerge)
+    Pic.ScreenLoad ("Pictures/stage2back.bmp", 0, 0, picMerge)
     loop
 	movement
 	fork sidebar
